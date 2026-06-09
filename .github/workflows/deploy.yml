@@ -1,0 +1,21 @@
+name: Deploy to ECS
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 8.218.130.202
+          username: root
+          key: ${{ secrets.ECS_SSH_KEY }}
+          script: |
+            cd /opt/daoxin
+            git pull origin master
+            npm install --production
+            systemctl restart daoxin
+            echo "Deployed successfully at $(date)"
