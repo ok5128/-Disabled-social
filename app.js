@@ -201,7 +201,7 @@ const spirits = [
   {
     id: "awakening",
     avatar: "self",
-    image: "assets/portraits/my-soul.jpg",
+    image: "assets/portraits/系统助手.jpeg",
     interactions: 143,
     type: { zh: "自我", en: "Self" },
     name: { zh: "我的灵魂", en: "My Soul" },
@@ -219,7 +219,7 @@ const spirits = [
   {
     id: "public-self",
     avatar: "self",
-    image: "assets/portraits/my-soul.jpg",
+    image: "assets/portraits/系统助手.jpeg",
     statusRing: "soul",
     interactions: 142,
     type: { zh: "公开人物", en: "Public Person" },
@@ -238,7 +238,7 @@ const spirits = [
   {
     id: "zhuangzi",
     avatar: "sage",
-    image: "assets/portraits/zhuangzi.jpg",
+    image: "assets/portraits/庄子.png",
     statusRing: "soul",
     interactions: 98,
     type: { zh: "先贤", en: "Sage" },
@@ -257,7 +257,7 @@ const spirits = [
   {
     id: "buddha",
     avatar: "buddha",
-    image: "assets/portraits/buddha.jpg",
+    image: "assets/portraits/佛陀.png",
     statusRing: "soul",
     interactions: 72,
     type: { zh: "觉者", en: "Awakened" },
@@ -276,7 +276,7 @@ const spirits = [
   {
     id: "socrates",
     avatar: "socrates",
-    image: "assets/portraits/socrates.jpg",
+    image: "assets/portraits/苏格拉底.png",
     statusRing: "soul",
     interactions: 51,
     type: { zh: "哲人", en: "Philosopher" },

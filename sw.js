@@ -1,15 +1,18 @@
-const CACHE_NAME = "daoxin-v79";
+const CACHE_NAME = "daoxin-v80";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=79",
-  "./app.js?v=79",
-  "./manifest.webmanifest?v=79",
-  "./icon.svg",
-  "./assets/portraits/my-soul.jpg",
-  "./assets/portraits/zhuangzi.jpg",
-  "./assets/portraits/buddha.jpg",
-  "./assets/portraits/socrates.jpg",
+  "./styles.css?v=80",
+  "./app.js?v=80",
+  "./manifest.webmanifest?v=80",
+  "./icon-512.png",
+  "./favicon.png",
+  "./apple-touch-icon.png",
+  "./assets/portraits/系统助手.jpeg",
+  "./assets/portraits/庄子.png",
+  "./assets/portraits/佛陀.png",
+  "./assets/portraits/苏格拉底.png",
+  "./assets/taiji.png",
 ];
 
 self.addEventListener("install", (event) => {
