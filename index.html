@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101513" />
+    <title>道心</title>
+    <link rel="manifest" href="manifest.webmanifest?v=79" />
+    <link rel="stylesheet" href="styles.css?v=79" />
+  <script src="auth-client.js"></script></head>
+  <body>
+    <main class="app-shell">
+      <section id="contactsPage" class="page page-active" aria-label="道心">
+        <span id="settingsDrawerTab" class="settings-drawer-tab" aria-hidden="true"></span>
+        <header class="topbar">
+          <div>
+            <h1 class="brand-title" data-i18n="contactsKicker">道心</h1>
+            <p class="brand-subtitle" data-i18n="contactsTitle">与先贤和众生灵魂碰撞中觉醒</p>
+          </div>
+          <div class="contact-control" role="group" aria-label="排序和搜索">
+            <div id="contactModeButton" class="contact-mode-button" role="button" tabindex="0">
+              <span id="contactModeText">最热</span>
+              <input id="contactSearchInput" class="contact-search-input" type="search" placeholder="搜索" aria-label="搜索灵魂" />
+            </div>
+            <button id="contactModeCycle" class="contact-cycle-button" type="button" aria-label="切换排序或搜索">
+              <span class="search-icon"></span>
+            </button>
+          </div>
+          <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch language">English</button>
+        </header>
+
+        <section class="orbit-section" aria-label="按互动频率排序的灵魂头像">
+          <div class="orbit-hint" data-i18n="sortHint">按互动频率排序</div>
+          <div id="spiritRail" class="spirit-rail" tabindex="0"></div>
+        </section>
+
+        <section id="spiritDetail" class="spirit-detail" aria-live="polite"></section>
+        <section id="contactsGuide" class="guide-section"></section>
+        <footer class="site-footer">
+          <p data-i18n="copyright">道新文化传播平台版权所有</p>
+        </footer>
+      </section>
+
+      <section id="soulPage" class="soul-drawer soul-page" aria-label="我的灵魂" aria-hidden="true">
+        <header class="chat-header drawer-header">
+          <button id="backFromSoul" class="icon-button" type="button" aria-label="返回道心">
+            <span class="icon-grid"></span>
+          </button>
+          <button id="soulStatusButton" class="status-button status-blind" type="button">盲猜</button>
+        </header>
+        <section id="soulProfile" class="soul-profile"></section>
+      </section>
+
+      <section id="chatPage" class="page chat-page" aria-label="聊天">
+        <div class="soul-figure" aria-hidden="true"><span></span></div>
+        <div id="chatBackdrop" class="chat-backdrop" aria-hidden="true"></div>
+        <header class="chat-header">
+          <button id="backToContacts" class="icon-button" type="button" aria-label="返回道心">
+            <span class="icon-grid"></span>
+          </button>
+          <div id="chatIdentity" class="chat-identity"></div>
+        </header>
+
+        <div id="chatMessages" class="chat-messages"></div>
+        <input id="chatHistorySlider" class="chat-history-slider" type="range" min="0" max="0" value="0" aria-label="查看过往聊天记录" />
+
+        <form id="chatForm" class="composer">
+          <div class="mode-switch" aria-label="对话模式">
+          <button id="modeOptionA" class="mode-button" type="button"></button>
+          </div>
+          <button id="voiceButton" class="voice-button" type="button">按住说话</button>
+          <input id="chatInput" class="text-input" type="text" placeholder="向此灵魂发问..." autocomplete="off" />
+          <button id="sendButton" class="send-button" type="submit">发送</button>
+        </form>
+        <section id="chatGuide" class="guide-section chat-guide"></section>
+        <footer class="site-footer chat-footer">
+          <p data-i18n="copyright">道新文化传播平台版权所有</p>
+        </footer>
+      </section>
+    </main>
+
+    <section id="modifySheet" class="modal-layer" aria-hidden="true">
+      <div class="modal-card">
+        <h2>修改形象</h2>
+        <div class="modal-actions">
+          <button id="changeAvatar" type="button">替换头像</button>
+          <button id="closeModify" type="button">取消</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="actionModal" class="modal-layer" aria-hidden="true">
+      <div class="modal-card">
+        <button id="closeActionModal" class="modal-back" type="button" aria-label="返回">
+          <span class="icon-grid"></span>
+        </button>
+        <h2 id="actionModalTitle">提示</h2>
+        <p id="actionModalText">操作已记录。</p>
+      </div>
+    </section>
+
+    <section id="editModal" class="modal-layer" aria-hidden="true">
+      <div class="modal-card edit-card">
+        <button id="closeEditModal" class="modal-back" type="button" aria-label="返回">
+          <span class="icon-grid"></span>
+        </button>
+        <h2 id="editModalTitle">修改内容</h2>
+        <textarea id="editModalInput" class="edit-textarea" rows="7"></textarea>
+        <div class="modal-actions">
+          <button id="saveEditModal" type="button">保存</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js?v=79"></script>
+  </body>
+</html>

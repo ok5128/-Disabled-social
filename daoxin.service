@@ -1,0 +1,16 @@
+[Unit]
+Description=Daoxin Node service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/daoxin
+EnvironmentFile=/opt/daoxin/.env
+ExecStart=/usr/bin/node /opt/daoxin/server.js
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
